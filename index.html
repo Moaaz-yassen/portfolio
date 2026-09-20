@@ -25,6 +25,9 @@
     <meta property="twitter:title" content="Moaaz Yassen — Backend .NET & AI Engineer">
     <meta property="twitter:description" content="Production-ready .NET and Python backend APIs with schema-validated AI integrations.">
 
+    <!-- Privacy-First Analytics Script (Cloudflare / GoatCounter) -->
+    <script data-goatcounter="https://moaazyassen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -214,6 +217,34 @@
             min-height: 120px;
         }
 
+        /* FlyRank Badge Section */
+        .flyrank-badge-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1E293B;
+            border: 1px solid #334155;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .flyrank-badge-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .flyrank-badge-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             padding-top: 30px;
@@ -234,6 +265,7 @@
             .btn { width: 100%; }
             .contact-card { padding: 20px 16px; }
             footer { flex-direction: column; align-items: flex-start; }
+            .flyrank-badge-box { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -250,7 +282,7 @@
         <main>
             <div class="hero">
                 <div class="badge">
-                    <div class="dot"></div> Site Hardened & SEO Optimized — 100/100 Speed
+                    <div class="dot"></div> Live Launched — Official FlyRank Graduate
                 </div>
                 <h1>I design production-ready .NET and Python backend APIs with schema-validated AI integrations and resilient web data pipelines.</h1>
                 <p class="subtitle">Full portfolio case studies, benchmark evaluation scores, and Swagger API docs loading for next week's build phase.</p>
@@ -269,7 +301,7 @@
                 </div>
             </div>
 
-            <!-- Dynamic Feature Section Hardened (FL-18) -->
+            <!-- Dynamic Feature Section Hardened (FL-15) -->
             <section id="contact-section" class="contact-card">
                 <h2>Send a Direct Project Inquiry</h2>
                 <p>Have a backend API or AI integration project? Submit a message below to test the live endpoint integration.</p>
@@ -297,13 +329,23 @@
                     <button type="submit" class="btn" id="submitBtn">Send Project Inquiry</button>
                 </form>
             </section>
+
+            <!-- Official FlyRank Graduate Badge (FL-19) -->
+            <div class="flyrank-badge-box">
+                <div class="flyrank-badge-text">
+                    🎓 Verified Graduate — FlyRank AI Internship Program
+                </div>
+                <a href="https://internship-badge.netlify.app/" target="_blank" class="flyrank-badge-link">
+                    Verify Official Badge ↗
+                </a>
+            </div>
         </main>
     </div>
 
     <div class="container">
         <footer>
             <span>&copy; 2026 Moaaz Yassen. Built with Inter & Slate identity specs.</span>
-            <span>Hardened & SEO Verified (FL-18)</span>
+            <span>Domain Launch & Analytics Integrated (FL-19)</span>
         </footer>
     </div>
 </body>
