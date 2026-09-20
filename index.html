@@ -98,6 +98,7 @@
         .cta-group {
             display: flex;
             gap: 16px;
+            margin-bottom: 40px;
         }
         .btn {
             display: inline-block;
@@ -108,6 +109,8 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
+            border: none;
+            cursor: pointer;
             transition: background 0.2s ease;
         }
         .btn:hover { background-color: #1D4ED8; }
@@ -117,9 +120,58 @@
             color: var(--text-color);
         }
         .btn-outline:hover { border-color: var(--muted-color); }
+
+        /* Form Styling */
+        .contact-card {
+            background-color: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 40px;
+        }
+        .contact-card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .contact-card p {
+            color: var(--muted-color);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--muted-color);
+        }
+        .form-control {
+            width: 100%;
+            background-color: var(--bg-color);
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: var(--text-color);
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             padding-top: 30px;
+            margin-top: 60px;
             color: var(--muted-color);
             font-size: 14px;
             display: flex;
@@ -141,22 +193,51 @@
         <main>
             <div class="hero">
                 <div class="badge">
-                    <div class="dot"></div> Site Live — Build Milestone Active
+                    <div class="dot"></div> Dynamic Feature Active — Real Inquiries Live
                 </div>
                 <h1>I design production-ready .NET and Python backend APIs with schema-validated AI integrations and resilient web data pipelines.</h1>
                 <p class="subtitle">Full portfolio case studies, benchmark evaluation scores, and Swagger API docs loading for next week's build phase.</p>
                 <div class="cta-group">
-                    <a href="mailto:moaazyassen6@gmail.com" class="btn">Book Intro Call</a>
+                    <a href="#contact-section" class="btn">Send Direct Message</a>
                     <a href="https://github.com/Moaaz-yassen" target="_blank" class="btn btn-outline">GitHub Profile</a>
                 </div>
             </div>
+
+            <!-- Dynamic Feature Section (FL-15) -->
+            <section id="contact-section" class="contact-card">
+                <h2>Send a Direct Project Inquiry</h2>
+                <p>Have a backend API or AI integration project? Submit a message below to test the live endpoint integration.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="0a8523b1-419b-449e-b9ef-60a6ae59db8d">
+                    <input type="hidden" name="subject" value="New Portfolio Inquiry from Moaaz Yassen Website">
+                    <input type="hidden" name="redirect" value="https://moaaz-yassen.github.io/portfolio/?success=1">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Requirements / Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe your backend API or AI workflow requirements..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Inquiry (Live POST Request)</button>
+                </form>
+            </section>
         </main>
     </div>
 
     <div class="container">
         <footer>
             <span>&copy; 2026 Moaaz Yassen. Built with Inter & Slate identity specs.</span>
-            <span>Empty but Live Milestone (FL-07)</span>
+            <span>Dynamic Feature Milestone (FL-15)</span>
         </footer>
     </div>
 </body>
