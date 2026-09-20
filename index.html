@@ -96,8 +96,27 @@
         p.subtitle {
             color: var(--muted-color);
             font-size: clamp(15px, 3.5vw, 18px);
+            margin-bottom: 24px;
+        }
+
+        /* Tech Pills (Reviewer Feedback Addition) */
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-bottom: 32px;
         }
+        .pill {
+            background-color: #1E293B;
+            color: var(--text-color);
+            border: 1px solid #334155;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+
         .cta-group {
             display: flex;
             gap: 16px;
@@ -110,7 +129,7 @@
             background-color: var(--accent-color);
             color: #FFFFFF;
             padding: 14px 24px;
-            min-height: 44px; /* Accessible Mobile Tap Target */
+            min-height: 44px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
@@ -128,7 +147,7 @@
         }
         .btn-outline:hover { border-color: var(--muted-color); }
 
-        /* Form & Mobile Polish */
+        /* Form Styling */
         .contact-card {
             background-color: #1E293B;
             border: 1px solid #334155;
@@ -163,7 +182,7 @@
             border-radius: 6px;
             padding: 12px 14px;
             color: var(--text-color);
-            font-size: 16px; /* 16px prevents iOS Safari auto-zoom */
+            font-size: 16px;
             font-family: inherit;
             min-height: 44px;
         }
@@ -189,7 +208,6 @@
             gap: 12px;
         }
 
-        /* Mobile First Breakpoints */
         @media (max-width: 640px) {
             body { padding: 20px 16px; }
             header { flex-direction: column; align-items: flex-start; }
@@ -213,12 +231,22 @@
         <main>
             <div class="hero">
                 <div class="badge">
-                    <div class="dot"></div> Mobile Polished & Audited — 100% Accessible
+                    <div class="dot"></div> Design Reviewed & Feedback Audited
                 </div>
                 <h1>I design production-ready .NET and Python backend APIs with schema-validated AI integrations and resilient web data pipelines.</h1>
                 <p class="subtitle">Full portfolio case studies, benchmark evaluation scores, and Swagger API docs loading for next week's build phase.</p>
+                
+                <!-- Tech Pills Added via Peer Crit -->
+                <div class="tech-pills">
+                    <span class="pill">C# / .NET Core</span>
+                    <span class="pill">Python / FastAPI</span>
+                    <span class="pill">PostgreSQL / Supabase</span>
+                    <span class="pill">OpenRouter / OpenAI SDK</span>
+                    <span class="pill">Docker & REST APIs</span>
+                </div>
+
                 <div class="cta-group">
-                    <a href="#contact-section" class="btn">Send Direct Message</a>
+                    <a href="#contact-section" class="btn">Send Direct Project Inquiry</a>
                     <a href="https://github.com/Moaaz-yassen" target="_blank" class="btn btn-outline">GitHub Profile</a>
                 </div>
             </div>
@@ -248,7 +276,7 @@
                         <textarea id="message" name="message" class="form-control" placeholder="Describe your backend API or AI workflow requirements..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn">Send Inquiry (Live POST Request)</button>
+                    <button type="submit" class="btn">Send Project Inquiry</button>
                 </form>
             </section>
         </main>
@@ -257,7 +285,7 @@
     <div class="container">
         <footer>
             <span>&copy; 2026 Moaaz Yassen. Built with Inter & Slate identity specs.</span>
-            <span>Mobile Polish & Audit (FL-16)</span>
+            <span>Design Review Audited (FL-17)</span>
         </footer>
     </div>
 </body>
